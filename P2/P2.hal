@@ -1,7 +1,11 @@
+#
 # P2 Möderle Gantry CNC Router Configuration with 7i76E
+# Based upon ZX45 setup from Peter Müller
+# adapted by: Sam Waggoner (diebesbeute)
+# Source: github.com/diebesbeute/P2-LinuxCNC/tree/p2/P2
+#
 
 loadrt [KINS]KINEMATICS
-#autoconverted  trivkins
 loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS 
 loadrt hostmot2
 loadrt hm2_eth board_ip="10.10.10.10" config=" num_encoders=1 num_pwmgens=0 num_stepgens=3 sserial_port_0=0xxxxx" 
@@ -297,7 +301,7 @@ net tool-prepare-loopback   iocontrol.0.tool-prepare      =>  iocontrol.0.tool-p
 #*******************
 # ShuttleXpress
 #*******************
-loadusr -W shuttle /dev/hidraw_shuttlexpress
+loadusr -W shuttle /dev/hidraw_shuttle
 loadrt abs_s32 names=abs_s32.sxp
 loadrt select8 names=select8.sxp-jog-speed,select8.sxp-jog-increment
 loadrt tristate_float names=tristate-float.sxp-jog-0,tristate-float.sxp-jog-1,tristate-float.sxp-jog-2,tristate-float.sxp-jog-3,tristate-float.sxp-jog-4,tristate-float.sxp-jog-5,tristate-float.sxp-jog-6,tristate-float.sxp-jog-7,tristate-float.sxp-jog-increment-0,tristate-float.sxp-jog-increment-1,tristate-float.sxp-jog-increment-2,tristate-float.sxp-jog-increment-3
