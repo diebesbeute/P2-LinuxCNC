@@ -1,4 +1,4 @@
-# Sam's P2 config
+# Sam's P2 config added something
 
 loadrt trivkins
 loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[TRAJ]AXES
