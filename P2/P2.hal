@@ -302,14 +302,14 @@ net tool-prepare-loopback   iocontrol.0.tool-prepare      =>  iocontrol.0.tool-p
 # ShuttleXpress
 #*******************
 loadusr -W shuttle /dev/hidraw_shuttlexpress
-loadrt abs_s32 names=abs_s32.sxp
-loadrt select8 names=select8.sxp-jog-speed,select8.sxp-jog-increment
-loadrt tristate_float names=tristate-float.sxp-jog-0,tristate-float.sxp-jog-1,tristate-float.sxp-jog-2,tristate-float.sxp-jog-3,tristate-float.sxp-jog-4,tristate-float.sxp-jog-5,tristate-float.sxp-jog-6,tristate-float.sxp-jog-7,tristate-float.sxp-jog-increment-0,tristate-float.sxp-jog-increment-1,tristate-float.sxp-jog-increment-2,tristate-float.sxp-jog-increment-3
-loadrt scale names=scale.sxp-jog-speed
-loadrt and2 names=and2.sxp-a-pos,and2.sxp-a-neg,and2.sxp-z-pos,and2.sxp-z-neg,and2.sxp-y-pos,and2.sxp-y-neg,and2.sxp-x-pos,and2.sxp-x-neg
-loadrt updown names=updown.sxp-feed-cycle
-loadrt ilowpass names=ilowpass.sxp-feed
-loadrt mux2 names=mux2.sxp-x-analog,mux2.sxp-y-analog,mux2.sxp-z-analog,mux2.sxp-a-analog
+#loadrt abs_s32 names=abs_s32.sxp
+#loadrt select8 names=select8.sxp-jog-speed,select8.sxp-jog-increment
+#loadrt tristate_float names=tristate-float.sxp-jog-0,tristate-float.sxp-jog-1,tristate-float.sxp-jog-2,tristate-float.sxp-jog-3,tristate-float.sxp-jog-4,tristate-float.sxp-jog-5,tristate-float.sxp-jog-6,tristate-float.sxp-jog-7,tristate-float.sxp-jog-increment-0,tristate-float.sxp-jog-increment-1,tristate-float.sxp-jog-increment-2,tristate-float.sxp-jog-increment-3
+#loadrt scale names=scale.sxp-jog-speed
+#loadrt and2 names=and2.sxp-a-pos,and2.sxp-a-neg,and2.sxp-z-pos,and2.sxp-z-neg,and2.sxp-y-pos,and2.sxp-y-neg,and2.sxp-x-pos,and2.sxp-x-neg
+#loadrt updown names=updown.sxp-feed-cycle
+#loadrt ilowpass names=ilowpass.sxp-feed
+#loadrt mux2 names=mux2.sxp-x-analog,mux2.sxp-y-analog,mux2.sxp-z-analog,mux2.sxp-a-analog
 
 # --- wire shuttle to meaningful signals ---
 net sxp.x-button        <= shuttle.0.button-0
