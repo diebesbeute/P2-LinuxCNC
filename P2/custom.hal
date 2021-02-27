@@ -17,7 +17,7 @@ loadrt mux4 names=mux4.fu.runmode						#Multiplexer 		-> Wählt 1 von 4 Zuständ
 loadrt mult2 names=mult2.fu.freq.send,mult2.fu.freq.return			#Multiplikation 	-> Multipliziert 2 Signale
 loadrt limit1 names=limit1.fu.send.freq.check,limit1.fu.return.drz.check	#Grenzwertüberprüfung 	-> Prüft ob Wert zwischen Max und Min-Wert
 loadrt comp names=comp.fu.return.error.state					#Komparator 		-> Prüft ob Wert grösser oder kleiner ist als Sollwert	
-loadrt and2 names=and2.read.estop						#UND Verknüpfung 	-> Prüft ob beie Eingänge 1 sind
+#loadrt and2 names=and2.read.estop						#UND Verknüpfung 	-> Prüft ob beie Eingänge 1 sind
 loadrt estop_latch names=estop_latch.axis					#Notstop 		-> Schaltet Notstop ein oder aus
 loadrt near names=near.soll.drz							#Bereichsprüfung 	-> Prüft ob Werte innerhalb eines bestimmten Bereichs
 

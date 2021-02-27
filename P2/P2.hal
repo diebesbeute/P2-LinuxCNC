@@ -16,7 +16,7 @@ loadrt pid names=pid.x,pid.y,pid.z,pid.s
 
 # --- LOAD Components ---
 loadrt abs_s32          names=abs_s32.sxp
-loadrt and2             names=and2.motion-enabled_spindle-unlocked,and2.spindle-release_spindle-on,and2.sxp-a-pos,and2.sxp-a-neg,and2.sxp-z-pos,and2.sxp-z-neg,and2.sxp-y-pos,and2.sxp-y-neg,and2.sxp-x-pos,and2.sxp-x-neg
+loadrt and2             names=and2.motion-enabled_spindle-unlocked,and2.spindle-release_spindle-on,and2.sxp-a-pos,and2.sxp-a-neg,and2.sxp-z-pos,and2.sxp-z-neg,and2.sxp-y-pos,and2.sxp-y-neg,and2.sxp-x-pos,and2.sxp-x-neg,and2.read.estop
 loadrt ilowpass         names=ilowpass.sxp-feed
 loadrt mux2             names=mux2.sxp-x-analog,mux2.sxp-y-analog,mux2.sxp-z-analog,mux2.sxp-a-analog,mux2.spindle-speed-or-position
 loadrt select8          names=select8.sxp-jog-speed,select8.sxp-jog-increment
