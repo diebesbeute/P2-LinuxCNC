@@ -1,2 +1,17 @@
-# Include your custom_postgui HAL commands here
-# This file will not be overwritten when you run PNCconf again
+#=======================================================================#
+#Custom Postguide Hal:							#
+#Hal Datei zur einbindung der Hal Pins in PyVCP				#
+#(Datei wird nach AXIS und PyVCP ausgeführt)				#
+#									#
+#Michael Sutter, last edit: 10.07.2019					#
+#=======================================================================#
+#=======================================================================#
+#Hal Pins die Werte übergeben definieren:
+
+net axis-spindle-drz pyvcp.axis-spindle-drz-bar				#<- Solldrehzahl aus LinuxCNC einlesen...	
+
+net fu-actual-drz pyvcp.fu-actual-drz					#<- aktuelle Drehzahl vom FU einlesen...
+
+net spindle-at-speed pyvcp.spindle-at-speed				#<- Pin "Spindel auf Solldrehzahl" einlesen...
+
+#=======================================================================#

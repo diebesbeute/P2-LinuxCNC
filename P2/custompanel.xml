@@ -1,0 +1,106 @@
+<!--	
+#=======================================================================#
+#Custom Panel:								#
+#PyVCP Panel zur Anzeige der Spindeldrehzahl in AXIS			#
+#Angezeigt werden: 	Soll-Drehzahl 			(von LinuxCNC)	#
+#			aktuelle Ist-Drehzahl 	(vom FU ausgelesen)	#
+#			Spindel auf Drehzahl 	(LED zur Visualisierung)#
+#									#
+#Michael Sutter, last edit: 10.07.2019					#
+#=======================================================================#
+-->
+
+<pyvcp>
+	<!-- Titel der erweiterten Anzeige -->
+	<labelframe text="Fräs-Spindel">	
+	<font>("Helvetica",20)</font>
+	
+	<!-- Tabelle: -->
+	<table>
+		<tablerow/>
+		<tablespan columns="2"/>
+			<tablesticky sticky="nsew"/>
+			<label>
+				<text>" "</text>
+				<font>("Helvetica",10)</font>
+			</label>
+		
+		<!-- Anzeige: Spindeldrehzahl erreicht: -->
+		<tablerow/>
+			<tablesticky sticky="w"/>
+			<label>
+				<text>"Drehzahl erreicht:"</text>
+			</label>
+			<tablesticky sticky="e"/>
+			<led>
+				<halpin>"spindle-at-speed"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"red"</off_color>
+			</led>
+					
+		<tablerow/>
+			<label>
+				<text>" "</text>
+			</label>
+	</table>
+		
+	<!-- Anzeige: Spindel Solldrehzahl: -->	
+	<table>
+		<tablesticky sticky="nsew"/>
+		<tablerow/>
+			<tablesticky sticky="nsew"/>
+			<label>
+				<text>"Drehzahl (U/min):"</text>
+				<font>("Helvetica",10)</font>
+			</label>
+		<tablerow/>
+			<tablesticky sticky="nsew"/>
+			<label>
+				<text>" "</text>
+				<font>("Helvetica",2)</font>
+			</label>
+		<tablerow/>
+			<tablesticky sticky="nsew"/>
+			<bar>
+				<halpin>"axis-spindle-drz-bar"</halpin>		
+				<min_>0</min_>
+				<max_>24000</max_>
+				<bgcolor>"grey"</bgcolor>
+				<fillcolor>"red"</fillcolor>			
+			</bar>
+		<tablerow/>
+			<label>
+				<text>" "</text>
+			</label>
+	</table>
+			
+	<!-- Anzeige: aktuelle Spindel Drehzahl: -->	
+	<table>
+		<tablesticky sticky="nsew"/>
+		<tablerow/>
+			<tablesticky sticky="nsew"/>
+			<label>
+				<text>"Drehzahl aktuell (U/min):"</text>
+				<font>("Helvetica",10)</font>
+			</label>
+		<tablerow/>
+			<tablesticky sticky="nsew"/>
+			<label>
+				<text>" "</text>
+				<font>("Helvetica",2)</font>
+			</label>
+		<tablerow/>
+			<tablesticky sticky="nsew"/>
+			<bar>
+				<halpin>"fu-actual-drz"</halpin>
+				<min_>2400</min_>
+				<max_>24000</max_>
+			</bar>
+		<tablerow/>
+			<label>
+				<text>" "</text>
+			</label>
+	</table>
+	</labelframe>
+</pyvcp>
