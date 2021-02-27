@@ -44,7 +44,7 @@ setp mux4.fu.runmode.in2 6						# Stop (Bremsen...Stop)	-> Powtran Register: 0x0
 setp mux4.fu.runmode.in3 1						# Start Vorwärts (CW)	-> Powtran Register: 0x0001
 
 net spindle-on spindle.0.on => mux4.fu.runmode.sel0		#Spindel Start (Softwarebutton LinuxCNC) -> Parameter Rückwärts (CCW) laden
-net spindle-fwd motion.spindle.0.forward => mux4.fu.runmode.sel1		#Spindel Vorwärts (Softwarebutton LinuxCNC) -> Parameter Vorwärts (CW) laden
+net spindle-fwd spindle.0.forward => mux4.fu.runmode.sel1		#Spindel Vorwärts (Softwarebutton LinuxCNC) -> Parameter Vorwärts (CW) laden
 net spindle-runmode mux4.fu.runmode.out => powtran.runmode.command	#-> Parameter an mb2hal.ini übergeben und an POWTRAN senden...
 
 #=======================================================================#
@@ -54,7 +54,7 @@ net spindle-runmode mux4.fu.runmode.out => powtran.runmode.command	#-> Parameter
 #-> Minimaldrehzahl: 2400 U/min = 40 Hz = 10% = 1000 (Prozent * 100)
 #-> Maximaldrehzahl: 24000 U/min = 400 Hz = 100% = 10000 (Prozent * 100)
 
-net axis-spindle-drz motion.spindle.0.speed-out-abs => mult2.fu.freq.send.in0	#<- Drehzahl aus LinuxCNC einlesen...
+net axis-spindle-drz spindle.0.speed-out-abs => mult2.fu.freq.send.in0	#<- Drehzahl aus LinuxCNC einlesen...
 setp mult2.fu.freq.send.in1 0.416667						#(Drehzahl * 0.416667) = Freq in %  	/-> 100/24000 * 100 = 0.41667 => Prozentwert der Drezahl * 100
 net spindle-speed-raw mult2.fu.freq.send.out => limit1.fu.send.freq.check.in	#-> an Min / Max Prüfung weitergeben...
 
@@ -107,6 +107,6 @@ net fu-actual-drz limit1.fu.return.drz.check.out => near.soll.drz.in2		#-> an Be
 
 net axis-spindle-drz near.soll.drz.in1						#<- Solldrehzahl aus LinuxCNC (wird oben bei der Frequenzberechnung eingelesen...)
 setp near.soll.drz.scale 1.01							#Toleranzbereich für Vergleich der Soll- und Ist-Drehzahl
-net spindle-at-speed near.soll.drz.out => motion.spindle.0.at-speed		#Wenn innerhalb Toleranz -> Spindel ist auf Solldrehzahl an Custom.postgui.hal weitergeben und in LinuxCNC anzeigen...
+net spindle-at-speed near.soll.drz.out => spindle.0.at-speed		#Wenn innerhalb Toleranz -> Spindel ist auf Solldrehzahl an Custom.postgui.hal weitergeben und in LinuxCNC anzeigen...
 
 #=======================================================================#
