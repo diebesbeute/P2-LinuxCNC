@@ -43,7 +43,7 @@ setp mux4.fu.runmode.in1 2						# Start Rückwärts (CCW)	-> Powtran Register: 0
 setp mux4.fu.runmode.in2 6						# Stop (Bremsen...Stop)	-> Powtran Register: 0x0006
 setp mux4.fu.runmode.in3 1						# Start Vorwärts (CW)	-> Powtran Register: 0x0001
 
-net spindle-on motion.spindle.0.on => mux4.fu.runmode.sel0		#Spindel Start (Softwarebutton LinuxCNC) -> Parameter Rückwärts (CCW) laden
+net spindle-on spindle.0.on => mux4.fu.runmode.sel0		#Spindel Start (Softwarebutton LinuxCNC) -> Parameter Rückwärts (CCW) laden
 net spindle-fwd motion.spindle.0.forward => mux4.fu.runmode.sel1		#Spindel Vorwärts (Softwarebutton LinuxCNC) -> Parameter Vorwärts (CW) laden
 net spindle-runmode mux4.fu.runmode.out => powtran.runmode.command	#-> Parameter an mb2hal.ini übergeben und an POWTRAN senden...
 
