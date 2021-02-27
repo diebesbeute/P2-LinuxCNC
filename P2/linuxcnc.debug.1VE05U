@@ -1,0 +1,6 @@
+Note: Using POSIX realtime
+./custom.hal:46: Pin 'motion.spindle-on' does not exist
+5883
+Stopping realtime threads
+Unloading hal components
+Note: Using POSIX realtime

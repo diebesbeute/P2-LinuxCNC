@@ -1,0 +1,196 @@
+Error report created by /usr/lib/tcltk/linuxcnc/show_errors.tcl:
+
+Print file information:
+RUN_IN_PLACE=no
+LINUXCNC_DIR=
+LINUXCNC_BIN_DIR=/usr/bin
+LINUXCNC_TCL_DIR=/usr/lib/tcltk/linuxcnc
+LINUXCNC_SCRIPT_DIR=
+LINUXCNC_RTLIB_DIR=/usr/lib/linuxcnc/modules
+LINUXCNC_CONFIG_DIR=
+LINUXCNC_LANG_DIR=/usr/lib/tcltk/linuxcnc/msgs
+INIVAR=inivar
+HALCMD=halcmd
+LINUXCNC_EMCSH=/usr/bin/wish8.6
+LINUXCNC - 2.8.0
+Machine configuration directory is '/home/p2user/linuxcnc/configs/P2-LinuxCNC/P2'
+Machine configuration file is 'P2.ini'
+INIFILE=/home/p2user/linuxcnc/configs/P2-LinuxCNC/P2/P2.ini
+VERSION=1.1
+PARAMETER_FILE=linuxcnc.var
+TASK=milltask
+HALUI=halui
+DISPLAY=axis
+COORDINATES=XYZ
+KINEMATICS=trivkins coordinates=XYZ
+Starting LinuxCNC...
+Starting LinuxCNC server program: linuxcncsvr
+Loading Real Time OS, RTAPI, and HAL_LIB modules
+Starting LinuxCNC IO program: io
+Starting HAL User Interface program: halui
+Found file(REL): ./P2.hal
+Found file(REL): ./custom.hal
+Shutting down and cleaning up LinuxCNC...
+Running HAL shutdown script
+shuttle: checking /dev/hidraw_shuttlexpress
+shuttle: found Contour Design ShuttleXpress on /dev/hidraw_shuttlexpress
+shuttle: exiting
+hm2: loading Mesa HostMot2 driver version 0.15
+hm2_eth: loading Mesa AnyIO HostMot2 ethernet driver version 0.2
+hm2_eth: 10.10.10.10: Hardware address: 00:60:1b:10:41:be
+hm2_eth: discovered 7I76E-16
+hm2/hm2_7i76e.0: Smart Serial Firmware Version 43
+Board hm2_7i76e.0.7i76.0.0 Hardware Mode 0 = standard
+Board hm2_7i76e.0.7i76.0.0 Software Mode 0 = io_spin
+Board hm2_7i76e.0.7i76.0.0 Software Mode 1 = io_ana_spin
+Board hm2_7i76e.0.7i76.0.0 Software Mode 2 = io_enc_ana_spin_fv
+hm2/hm2_7i76e.0: 51 I/O Pins used:
+hm2/hm2_7i76e.0:     IO Pin 000 (P1-01): StepGen #0, pin Direction (Output)
+hm2/hm2_7i76e.0:     IO Pin 001 (P1-14): StepGen #0, pin Step (Output)
+hm2/hm2_7i76e.0:     IO Pin 002 (P1-02): StepGen #1, pin Direction (Output)
+hm2/hm2_7i76e.0:     IO Pin 003 (P1-15): StepGen #1, pin Step (Output)
+hm2/hm2_7i76e.0:     IO Pin 004 (P1-03): StepGen #2, pin Direction (Output)
+hm2/hm2_7i76e.0:     IO Pin 005 (P1-16): StepGen #2, pin Step (Output)
+hm2/hm2_7i76e.0:     IO Pin 006 (P1-04): IOPort
+hm2/hm2_7i76e.0:     IO Pin 007 (P1-17): IOPort
+hm2/hm2_7i76e.0:     IO Pin 008 (P1-05): IOPort
+hm2/hm2_7i76e.0:     IO Pin 009 (P1-06): IOPort
+hm2/hm2_7i76e.0:     IO Pin 010 (P1-07): Smart Serial Interface #0, pin TxData0 (Output)
+hm2/hm2_7i76e.0:     IO Pin 011 (P1-08): Smart Serial Interface #0, pin RxData0 (Input)
+hm2/hm2_7i76e.0:     IO Pin 012 (P1-09): IOPort
+hm2/hm2_7i76e.0:     IO Pin 013 (P1-10): IOPort
+hm2/hm2_7i76e.0:     IO Pin 014 (P1-11): Encoder #0, pin Index (Input)
+hm2/hm2_7i76e.0:     IO Pin 015 (P1-12): Encoder #0, pin B (Input)
+hm2/hm2_7i76e.0:     IO Pin 016 (P1-13): Encoder #0, pin A (Input)
+hm2/hm2_7i76e.0:     IO Pin 017 (P2-01): IOPort
+hm2/hm2_7i76e.0:     IO Pin 018 (P2-14): IOPort
+hm2/hm2_7i76e.0:     IO Pin 019 (P2-02): IOPort
+hm2/hm2_7i76e.0:     IO Pin 020 (P2-15): IOPort
+hm2/hm2_7i76e.0:     IO Pin 021 (P2-03): IOPort
+hm2/hm2_7i76e.0:     IO Pin 022 (P2-16): IOPort
+hm2/hm2_7i76e.0:     IO Pin 023 (P2-04): IOPort
+hm2/hm2_7i76e.0:     IO Pin 024 (P2-17): IOPort
+hm2/hm2_7i76e.0:     IO Pin 025 (P2-05): IOPort
+hm2/hm2_7i76e.0:     IO Pin 026 (P2-06): IOPort
+hm2/hm2_7i76e.0:     IO Pin 027 (P2-07): IOPort
+hm2/hm2_7i76e.0:     IO Pin 028 (P2-08): IOPort
+hm2/hm2_7i76e.0:     IO Pin 029 (P2-09): IOPort
+hm2/hm2_7i76e.0:     IO Pin 030 (P2-10): IOPort
+hm2/hm2_7i76e.0:     IO Pin 031 (P2-11): IOPort
+hm2/hm2_7i76e.0:     IO Pin 032 (P2-12): IOPort
+hm2/hm2_7i76e.0:     IO Pin 033 (P2-13): IOPort
+hm2/hm2_7i76e.0:     IO Pin 034 (P3-01): IOPort
+hm2/hm2_7i76e.0:     IO Pin 035 (P3-14): IOPort
+hm2/hm2_7i76e.0:     IO Pin 036 (P3-02): IOPort
+hm2/hm2_7i76e.0:     IO Pin 037 (P3-15): IOPort
+hm2/hm2_7i76e.0:     IO Pin 038 (P3-03): IOPort
+hm2/hm2_7i76e.0:     IO Pin 039 (P3-16): IOPort
+hm2/hm2_7i76e.0:     IO Pin 040 (P3-04): IOPort
+hm2/hm2_7i76e.0:     IO Pin 041 (P3-17): IOPort
+hm2/hm2_7i76e.0:     IO Pin 042 (P3-05): IOPort
+hm2/hm2_7i76e.0:     IO Pin 043 (P3-06): IOPort
+hm2/hm2_7i76e.0:     IO Pin 044 (P3-07): IOPort
+hm2/hm2_7i76e.0:     IO Pin 045 (P3-08): IOPort
+hm2/hm2_7i76e.0:     IO Pin 046 (P3-09): IOPort
+hm2/hm2_7i76e.0:     IO Pin 047 (P3-10): IOPort
+hm2/hm2_7i76e.0:     IO Pin 048 (P3-11): IOPort
+hm2/hm2_7i76e.0:     IO Pin 049 (P3-12): IOPort
+hm2/hm2_7i76e.0:     IO Pin 050 (P3-13): IOPort
+hm2/hm2_7i76e.0: registered
+hm2_eth: HostMot2 ethernet driver unloaded
+hm2: unloading
+Removing HAL_LIB, RTAPI, and Real Time OS modules
+Removing NML shared memory segments
+
+Debug file information:
+Note: Using POSIX realtime
+./custom.hal:46: Pin 'motion.spindle-on' does not exist
+5883
+Stopping realtime threads
+Unloading hal components
+Note: Using POSIX realtime
+
+
+
+-----------------------------------------------------------------------
+Info report created by linuxcnc_info:
+The file:    /tmp/linuxcnc_info.txt
+can be posted to a forum or a web site like:
+     http://pastebin.com
+in order to provide information about the linuxcnc
+system and configuration.
+
+                Date: Sat 27 Feb 2021 12:38:48 PM CET
+            UTC Date: Sat 27 Feb 2021 11:38:48 AM UTC
+        this program: /usr/bin/linuxcnc_info
+              uptime: 12:38:48 up 1:54, 1 user, load average: 1.52, 0.82, 0.56
+     lsb_release -sa: Debian Debian GNU/Linux 10 (buster) 10 buster
+      which linuxcnc: /usr/bin/linuxcnc
+                 pwd: /home/p2user/linuxcnc/configs/P2-LinuxCNC/P2
+                USER: p2user
+             LOGNAME: p2user
+                HOME: /home/p2user
+              EDITOR: 
+              VISUAL: 
+            LANGUAGE: en_US:en
+                TERM: dumb
+           COLORTERM: 
+             DISPLAY: :0.0
+             DESKTOP: lightdm-xsession
+        display size: 1920x1080 pixels (508x285 millimeters)
+                PATH: /usr/bin:/home/p2user/linuxcnc/configs/P2-LinuxCNC/P2/bin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+uname items:
+         nodename -n: P2CNC
+      kernel-name -s: Linux
+      kernel-vers -v: #1 SMP PREEMPT RT Debian 4.19.146-1 (2020-09-17)
+          machine -m: x86_64
+        processor -p: unknown
+         platform -i: unknown
+      oper system -o: GNU/Linux
+
+/proc items:
+             cmdline: BOOT_IMAGE=/boot/vmlinuz-4.19.0-11-rt-amd64 root=UUID=85bd3bc9-e8c5-4aa9-99cb-c3ad9df9ef66 ro initrd=/install/gtk/initrd.gz quiet
+          model name: Intel(R) Celeron(R) CPU J3455 @ 1.50GHz
+               cores: 4
+             cpu MHz: 1008.390
+             parport: 0000-0000 : parport0 0000-0000 : parport0
+              serial: 0000-0000 : serial 0000-0000 : serial
+
+Versions:
+                 gcc: gcc (Debian 8.3.0-6) 8.3.0
+              python: Python 2.7.16
+                 git: git version 2.20.1
+          git commit: NA
+                 tcl: 8.6
+                  tk: 8.6
+               glade: not_in_PATH
+          glade-gtk2: not_in_PATH
+
+linuxcnc_var all:
+
+     LINUXCNCVERSION: 2.8.0
+LINUXCNC_AUX_GLADEVCP: /usr/share/linuxcnc/aux_gladevcp
+LINUXCNC_AUX_EXAMPLES: /usr/share/linuxcnc/aux_examples
+            REALTIME: /etc/init.d/realtime
+                 RTS: uspace
+          HALLIB_DIR: /usr/share/linuxcnc/hallib
+
+dpkg -l '*linuxcnc*':
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                Version      Architecture Description
++++-===================-============-============-=====================================================================
+un  linuxcnc            <none>       <none>       (no description available)
+un  linuxcnc-dev        <none>       <none>       (no description available)
+un  linuxcnc-doc        <none>       <none>       (no description available)
+ii  linuxcnc-doc-cn     1:2.8.0      all          motion controller for CNC machines and robots (Chinese
+ii  linuxcnc-doc-en     1:2.8.0      all          motion controller for CNC machines and robots (English documentation)
+ii  linuxcnc-doc-es     1:2.8.0      all          controlador de movimiento para máquinas CNC y robots (Español).
+ii  linuxcnc-doc-fr     1:2.8.0      all          motion controller for CNC machines and robots (French documentation)
+un  linuxcnc-sim        <none>       <none>       (no description available)
+un  linuxcnc-sim-dev    <none>       <none>       (no description available)
+ii  linuxcnc-uspace     1:2.8.0      amd64        motion controller for CNC machines and robots
+ii  linuxcnc-uspace-dev 1:2.8.0      amd64        PC based motion controller for real-time Linux
+
